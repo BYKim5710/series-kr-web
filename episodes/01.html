@@ -1,419 +1,465 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>제1차 서문 – 왜 지금, 종교를 다시 묻는가</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>제1차(서문) — 왜 지금, 종교를 다시 묻는가</title>
+
+  <!-- OG (공유) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="제1차(서문) — 왜 지금, 종교를 다시 묻는가" />
+  <meta property="og:description" content="세 권의 저서와 영상에 흩어진 사유를 한 흐름으로 모아, 종교혁명의 출발점을 정리합니다." />
+  <!-- 필요하면 대표 이미지로 교체 -->
+  <meta property="og:image" content="https://bykim5710.github.io/series-kr-web/images/ep.01-무유.jpg" />
 
   <style>
     :root{
-      --bg:#050c18;
-      --card:#0b1628;
-      --line:#1f2d45;
-      --text:#e8f0ff;
-      --muted:#9fb3d9;
-      --accent:#4ea1ff;
-      --accent2:#2bd4ff;
-      --shadow: rgba(0,0,0,.45);
+      --bg:#070b14;
+      --panel:#0b1323;
+      --panel2:#0c1830;
+      --text:#eaf0ff;
+      --muted:#b9c4e6;
+      --line:rgba(255,255,255,.10);
+      --accent:#57d3ff;
+      --accent2:#8aa6ff;
+      --btn:#2e6bff;
+      --btn2:#1f4fe0;
+      --shadow: 0 18px 70px rgba(0,0,0,.55);
+      --radius:18px;
     }
-
-    *{ box-sizing:border-box; }
-
+    *{box-sizing:border-box}
     body{
       margin:0;
-      background: radial-gradient(1200px 700px at 20% 10%, #0a1b35 0%, var(--bg) 55%, #020611 100%);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(87,211,255,.14), transparent 60%),
+        radial-gradient(900px 700px at 85% 20%, rgba(138,166,255,.12), transparent 55%),
+        radial-gradient(900px 600px at 40% 90%, rgba(255,255,255,.06), transparent 60%),
+        var(--bg);
       color:var(--text);
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-      line-height:1.75;
+      line-height:1.85;
+      letter-spacing:.1px;
     }
-
-    a{ color:inherit; }
-
-    .wrapper{
-      max-width:1100px;
-      margin:0 auto;
-      padding:56px 18px 90px;
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px; margin:0 auto; padding:34px 18px 80px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; margin-bottom:18px;
     }
-
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+    .badge{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px; border-radius:999px;
+      background:rgba(255,255,255,.06);
       border:1px solid var(--line);
-      border-radius:22px;
-      box-shadow:0 14px 40px var(--shadow);
-      margin:0 0 28px 0;
-      overflow:hidden;
-    }
-
-    .pad{ padding:30px; }
-    .pad-lg{ padding:34px; }
-
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:8px 14px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.18);
-      color: var(--muted);
-      font-size:13px;
-    }
-    .pill b{ color:#cfe0ff; font-weight:700; }
-
-    h1{
-      margin:14px 0 10px;
-      font-size:36px;
-      letter-spacing:-0.02em;
-    }
-    .lead{
-      margin:0;
       color:var(--muted);
-      max-width:900px;
-    }
-
-    h2{
-      margin:0 0 12px;
-      font-size:22px;
-      letter-spacing:-0.01em;
-    }
-    h3{
-      margin:0 0 10px;
-      font-size:18px;
-      letter-spacing:-0.01em;
-      color:#d9e7ff;
-    }
-
-    .muted{ color:var(--muted); }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1.2fr 1.8fr;
-      gap:18px;
-    }
-    @media (max-width: 980px){
-      .grid{ grid-template-columns:1fr; }
-    }
-
-    .subcard{
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.16);
-      border-radius:18px;
-      padding:22px;
-      min-height: 100%;
-    }
-
-    .author-row{
-      display:flex;
-      gap:18px;
-      align-items:flex-start;
-    }
-    .author-img{
-      width:120px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.14);
-      background:#0a1222;
-      box-shadow:0 10px 25px rgba(0,0,0,.35);
-      flex:0 0 auto;
-    }
-
-    .books{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
-    .book{
-      width: 190px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.16);
-      padding:14px;
-    }
-    .book img{
-      width:100%;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.12);
-      background:#0a1222;
-      display:block;
-    }
-    .book .meta{
-      margin-top:12px;
-      font-size:13px;
-      color:var(--muted);
-    }
-    .book .title{
-      font-weight:800;
-      color:#eaf2ff;
-      margin-bottom:4px;
       font-size:14px;
     }
-
-    .divider{
-      height:1px;
-      background: rgba(255,255,255,.10);
-      margin:18px 0;
-    }
-
-    .preface p{
-      margin:0 0 14px 0;
-      color:#e9f1ff;
-    }
-    .preface p:last-child{ margin-bottom:0; }
-
-    .num{
-      display:inline-flex;
-      width:28px;
-      height:28px;
-      align-items:center;
-      justify-content:center;
-      border-radius:10px;
-      margin-right:10px;
-      background: rgba(78,161,255,.16);
-      border: 1px solid rgba(78,161,255,.35);
-      color:#cfe6ff;
-      font-weight:800;
-      font-size:13px;
-      vertical-align:middle;
-    }
-
+    .badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+    .btn-row{display:flex; gap:10px; flex-wrap:wrap}
     .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:11px 16px;
-      border-radius:12px;
-      text-decoration:none;
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      color:var(--text);
       font-size:14px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.05);
+      text-decoration:none;
     }
+    .btn:hover{background:rgba(255,255,255,.08); text-decoration:none}
     .btn.primary{
-      background: linear-gradient(180deg, rgba(78,161,255,.95), rgba(78,161,255,.78));
-      border:1px solid rgba(78,161,255,.25);
-      color:#fff;
-      font-weight:800;
+      background:linear-gradient(180deg, var(--btn), var(--btn2));
+      border:none;
     }
-    .btn.secondary{
-      background: rgba(43,212,255,.10);
-      border:1px solid rgba(43,212,255,.28);
-      color:#dffbff;
-      font-weight:700;
+    .btn.primary:hover{filter:brightness(1.08)}
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:26px 24px;
+      box-shadow:var(--shadow);
     }
-    .btn:hover{ filter:brightness(1.05); }
-    .btn:active{ transform:translateY(1px); }
-
-    .btn-row{
-      display:flex;
+    h1{
+      margin:10px 0 6px;
+      font-size:38px;
+      line-height:1.22;
+      letter-spacing:-.4px;
+    }
+    .subtitle{
+      margin:0 0 14px;
+      color:var(--muted);
+      font-size:18px;
+    }
+    .hr{height:1px; background:var(--line); margin:18px 0 22px}
+    .grid2{
+      display:grid; grid-template-columns: 1fr 1.25fr; gap:16px;
+    }
+    @media (max-width: 920px){
+      .grid2{grid-template-columns:1fr}
+      h1{font-size:32px}
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px 18px;
+    }
+    .card h2{
+      margin:0 0 10px;
+      font-size:20px;
+      letter-spacing:-.2px;
+    }
+    .muted{color:var(--muted)}
+    .author{
+      display:flex; gap:14px; align-items:center;
+    }
+    .avatar{
+      width:76px; height:76px; border-radius:16px;
+      border:1px solid var(--line);
+      overflow:hidden; flex:0 0 auto;
+      background:rgba(255,255,255,.04);
+    }
+    .avatar img{width:100%; height:100%; object-fit:cover}
+    .author .name{font-weight:800}
+    .author .desc{font-size:16px; color:var(--muted); margin-top:4px}
+    .books{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
       gap:12px;
-      flex-wrap:wrap;
       margin-top:10px;
     }
-
-    .small{
-      font-size:13px;
-      color:var(--muted);
+    @media (max-width: 900px){
+      .books{grid-template-columns:1fr}
     }
-
-    code.k{
-      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-      font-size:12px;
-      color:#d7e6ff;
-      background: rgba(0,0,0,.25);
-      padding:2px 6px;
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:8px;
+    .book{
+      border:1px solid var(--line);
+      border-radius:16px;
+      overflow:hidden;
+      background:rgba(0,0,0,.20);
+      display:flex; flex-direction:column;
+      min-height:360px;
+    }
+    .cover{
+      height:210px;
+      background:rgba(255,255,255,.04);
+      display:flex; align-items:center; justify-content:center;
+      padding:10px;
+    }
+    .cover img{
+      max-width:100%;
+      max-height:100%;
+      object-fit:contain;
+      filter: drop-shadow(0 10px 25px rgba(0,0,0,.45));
+    }
+    .book .body{padding:14px 14px 16px}
+    .book .year{color:var(--accent); font-weight:800; font-size:14px}
+    .book .title{margin:6px 0 6px; font-weight:800; font-size:16px}
+    .book .blurb{margin:0; color:var(--muted); font-size:15px; line-height:1.75}
+    .section{
+      margin-top:16px;
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:20px 20px;
+    }
+    .section h2{
+      margin:0 0 14px;
+      font-size:22px;
+      letter-spacing:-.2px;
+    }
+    /* 본문 가독성: 크게, 넓게 */
+    .preface{
+      font-size:18px;
+      line-height:1.95;
+      color:var(--text);
+    }
+    .preface p{margin:0 0 14px}
+    .preface .num{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:28px; height:28px; border-radius:10px;
+      margin-right:10px;
+      background:rgba(87,211,255,.12);
+      border:1px solid rgba(87,211,255,.22);
+      color:var(--accent);
+      font-weight:900;
+      font-size:14px;
+      vertical-align:middle;
+    }
+    .preface .h{
+      display:block;
+      margin:18px 0 6px;
+      font-weight:900;
+      letter-spacing:-.2px;
+      font-size:20px;
+    }
+    .callout{
+      border-left:3px solid rgba(87,211,255,.55);
+      padding:12px 14px;
+      background:rgba(87,211,255,.06);
+      border-radius:14px;
+      color:var(--muted);
+      margin-top:10px;
+      font-size:16px;
+      line-height:1.85;
+    }
+    .rec{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    @media (max-width: 900px){
+      .rec{grid-template-columns:1fr}
+    }
+    .recitem{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+      background:rgba(0,0,0,.18);
+    }
+    .recitem .label{
+      color:var(--accent);
+      font-weight:900;
+      margin-bottom:8px;
+    }
+    .quote{
+      color:var(--text);
+      font-size:16.5px;
+      line-height:1.85;
+      margin:0 0 12px;
+    }
+    .small{font-size:14px; color:var(--muted)}
+    .footer-nav{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:14px;
     }
   </style>
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="wrap">
 
-    <!-- Header -->
-    <section class="card">
-      <div class="pad-lg">
-        <div class="pill">
-          <span>◆</span>
-          <b>제1차 (Cycle 1)</b>
-          <span class="muted">종교혁명 총서 서문</span>
-        </div>
-        <h1>왜 지금, 종교를 다시 묻는가</h1>
-        <p class="lead">
-          세 권의 저서와 영상에 흩어진 사유를 한 흐름으로 모아,
-          제1차의 문제의식과 출발점을 정리합니다.
-        </p>
+    <div class="topbar">
+      <div class="badge"><span class="dot"></span> 제1차(Cycle 1) · 종교혁명 총서 서문</div>
+      <div class="btn-row">
+        <a class="btn" href="../index.html">메인으로</a>
+        <a class="btn primary" href="#preface">서문으로</a>
+        <a class="btn" href="#recommendation">추천사 요약</a>
       </div>
-    </section>
+    </div>
 
-    <!-- Author + Books -->
-    <section class="card">
-      <div class="pad">
-        <div class="grid">
+    <main class="hero">
+      <div class="badge"><span class="dot"></span> 제1차(Cycle 1) · 종교혁명 총서 서문</div>
+      <h1>왜 지금, 종교를 다시 묻는가</h1>
+      <p class="subtitle">세 권의 저서와 영상에 흩어진 사유를 한 흐름으로 모아, 제1차의 문제의식과 출발점을 정리합니다.</p>
 
-          <div class="subcard">
-            <h2>저자</h2>
-            <div class="author-row">
-              <img class="author-img" src="../images/ep.01-writer.png" alt="저자 사진" />
-              <div>
-                <div style="font-weight:900; margin-bottom:6px;">신통신통회(新統神通會) 회장 김병윤</div>
-                <div class="muted">
-                  존재·죽음·신·사후세계에 대한 질문을 50여 년간 추적해 왔습니다.<br />
-                  이 총서는 “믿으라”가 아니라 “읽고, 비교하고, 검증하라”는 요청입니다.
-                </div>
-              </div>
+      <div class="hr"></div>
+
+      <div class="grid2">
+        <section class="card">
+          <h2>저자</h2>
+          <div class="author">
+            <div class="avatar">
+              <!-- (선택) 기존 저자 사진 경로가 있다면 교체하세요 -->
+              <img src="../images/ep.01-writer.png" alt="저자 사진" onerror="this.style.display='none';" />
             </div>
-
-            <div class="divider"></div>
-
-            <div class="small">
-              이미지 폴더: <code class="k">/images</code><br/>
-              현재 페이지: <code class="k">/episodes/01.html</code>
+            <div>
+              <div class="name">신통신통회(新統神通會) 회장 김병윤</div>
+              <div class="desc">존재·죽음·신·사후세계에 대한 질문을 50여 년간 추적해 왔습니다.<br/>
+                이 총서는 “믿으라”가 아니라 “읽고, 비교하고, 검증하라”는 요청입니다.
+              </div>
             </div>
           </div>
 
-          <div class="subcard">
-            <h2>사유의 전개</h2>
-            <p class="muted" style="margin:0;">
-              2012 → 2022 → 2024 : 사유의 축적이 ‘종교혁명’이라는 질문으로 수렴해 온 과정
-            </p>
+          <div class="callout">
+            ※ 이 페이지의 목적은 <b>요약</b>이 아니라, 향후 연재물 전체가 “책으로 완성될 수 있을 만큼” <b>정확한 본문</b>을 싣되,
+            <b>중복을 피하면서</b> 제1차의 출발점을 정리하는 데 있습니다.
+          </div>
+        </section>
 
-            <div class="books">
-              <div class="book">
+        <section class="card">
+          <h2>사유의 전개</h2>
+          <div class="muted">2012 → 2022 → 2024 : 사유의 축적이 ‘종교혁명’이라는 질문으로 수렴해 온 과정</div>
+
+          <div class="books">
+            <article class="book">
+              <div class="cover">
+                <!-- 업로드한 파일명 기준 -->
                 <img src="../images/ep.01-영과영.jpg" alt="영과 영 표지" />
-                <div class="meta">
-                  <div class="title">2012 『영과 영 (Soul &amp; Zero)』</div>
-                  <div>존재의 근원과 구조를 다시 묻다</div>
-                </div>
               </div>
+              <div class="body">
+                <div class="year">2012</div>
+                <div class="title">『영과 영 (Soul &amp; Zero)』</div>
+                <p class="blurb">존재의 근원과 구조를 다시 묻기 시작한 첫 정리. 종교적 언어를 ‘검증 가능한 질문’으로 되돌린다.</p>
+              </div>
+            </article>
 
-              <div class="book">
+            <article class="book">
+              <div class="cover">
+                <!-- 업로드한 파일명 기준 -->
                 <img src="../images/ep.01-하나님과의대화.png" alt="하나님과의 대화 표지" />
-                <div class="meta">
-                  <div class="title">2022 『하나님과의 대화』</div>
-                  <div>본문을 읽고 비교하며 교리를 검증하다</div>
-                </div>
               </div>
+              <div class="body">
+                <div class="year">2022</div>
+                <div class="title">『하나님과의 대화』</div>
+                <p class="blurb">성서를 ‘권위의 문서’가 아니라 ‘검증의 대상’으로 놓고, 텍스트 내부의 긴장과 구조를 추적한다.</p>
+              </div>
+            </article>
 
-              <div class="book">
+            <article class="book">
+              <div class="cover">
+                <!-- 업로드한 파일명 기준 -->
                 <img src="../images/ep.01-무유.jpg" alt="무유 표지" />
-                <div class="meta">
-                  <div class="title">2024 『무유 (Nosome)』</div>
-                  <div>무유와 전이 구조로 사후세계 신화를 해체하다</div>
-                </div>
               </div>
-            </div>
-
+              <div class="body">
+                <div class="year">2024</div>
+                <div class="title">『무유 (Nosome)』</div>
+                <p class="blurb">사후세계의 신화를 해체하고, 전이 구조를 통해 종교가 회피해 온 질문을 다시 현실로 끌어온다.</p>
+              </div>
+            </article>
           </div>
-
-        </div>
+        </section>
       </div>
-    </section>
 
-    <!-- Preface (6 paragraphs) -->
-    <section class="card">
-      <div class="pad preface">
+      <!-- 서문 본문 -->
+      <section id="preface" class="section">
         <h2>서문</h2>
 
-        <h3><span class="num">1</span>첫 질문</h3>
-        <p>
-          나는 초등학교 5학년 때 처음으로 이런 질문을 던졌다. 우리는 어디에서 왔는가? 삶은 왜 시작되며,
-          죽음은 어디로 이어지는가? 신은 존재하는가, 아니면 인간이 만들어낸 개념인가? 이 질문은 단순한 호기심이 아니라,
-          설명되지 않는 것에 대한 근본적인 의문이었다. 나는 ‘믿음’으로 답을 받기보다,
-          스스로 이해할 수 있는 설명을 원했다.
-        </p>
-
-        <h3><span class="num">2</span>확신이 아니라 질문의 심화</h3>
-        <p>
-          1976년, 인생의 한 전환점을 맞았다. 많은 사람들은 종교적 체험을 통해 확신을 얻었다고 말하지만,
-          나에게 그 사건은 오히려 질문을 더 깊게 만들었다. 나는 어떤 계시를 받았다고 선언하지 않았다.
-          대신, 기존 종교가 말하는 신과 인간, 사후세계의 구조를 처음부터 다시 검토해야 한다는 생각이 강해졌다.
-          그것은 믿음의 강화가 아니라, 검증의 시작이었다.
-        </p>
-
-        <h3><span class="num">3</span>존재 구조에 대한 첫 정리 – 『영과 영』(2012)</h3>
-        <p>
-          수십 년간의 사유는 2012년 『영과 영(Soul &amp; Zero)』으로 처음 정리되었다.
-          이 책은 특정 종교를 옹호하기 위한 것이 아니라, 존재의 근원과 구조를 다시 묻기 위한 작업이었다.
-          나는 종교적 언어와 철학적 개념을 교차 검토하며, 신앙과 이성이 분리되어야 할 이유가 없다는 점을 강조했다.
-          종교가 진리라면, 논리적 검증을 견뎌야 한다는 것이 출발점이었다.
-        </p>
-
-        <h3><span class="num">4</span>성서 검증으로의 확장 – 『하나님과의 대화』(2022)</h3>
-        <p>
-          2022년 『하나님과의 대화』에서는 성서 텍스트 자체를 검토 대상으로 삼았다.
-          엘로힘과 여호와의 차이, 구약과 신약의 긴장, 교리 형성의 역사적 배경 등을 분석하며,
-          성경을 ‘권위의 문서’가 아니라 ‘검증의 대상’으로 다루었다.
-          성서를 읽지 않는 신앙은 신앙이 아니라 관습에 가깝다.
-          종교가 진리라면, 텍스트는 질문을 허용해야 한다.
-        </p>
-
-        <h3><span class="num">5</span>사후세계 신화의 재구성 – 『무유(Nosome)』(2024)</h3>
-        <p>
-          2024년 『무유(Nosome)』에서는 기존 종교가 말해 온 사후세계 개념을 근본적으로 재해석했다.
-          천국과 지옥이라는 이분법적 구조 대신, 존재의 전이 구조를 제시하며 신화적 사후세계 개념을 해체했다.
-          이것은 종교를 부정하기 위한 작업이 아니라,
-          오히려 성현들의 가르침을 왜곡 없이 이해하기 위한 시도였다.
-        </p>
-
-        <h3><span class="num">6</span>왜 지금 다시 묻는가</h3>
-        <p>
-          오늘날 종교는 여전히 권위를 유지하고 있지만, 그 권위는 종종 검증을 회피하는 방식으로 작동한다.
-          모순은 신비로 덮이고, 질문은 불경으로 간주된다. 나는 이 시리즈를 통해 ‘믿으라’고 말하지 않는다.
-          읽고, 비교하고, 검증하라고 요청한다. 만약 종교가 진리라면, 질문을 두려워할 이유가 없다.
-          그리고 만약 질문을 견디지 못한다면, 그것은 다시 물어야 할 대상이다.
-        </p>
-      </div>
-    </section>
-
-    <!-- Recommendations (summary + direct PDF links) -->
-    <section class="card" id="recommendation">
-      <div class="pad">
-        <h2>추천사</h2>
-        <p class="muted" style="margin:0 0 14px;">
-          추천사는 본문 중복을 피하기 위해 핵심 한 줄만 소개하고, 전문은 PDF로 직접 연결합니다.
-        </p>
-
-        <div class="subcard" style="margin-top:12px;">
-          <h3 style="margin-bottom:8px;">영과영</h3>
-          <p class="muted" style="margin:0 0 10px;">
-            “영과 영은 제목부터 심상치 않다. 방대한 종교 주제를 다루며 비판적 시각을 제시한다.”
+        <div class="preface">
+          <span class="h"><span class="num">1</span>첫 질문</span>
+          <p>
+            나는 초등학교 5학년 때 처음으로 이런 질문을 던졌다. 우리는 어디에서 왔는가? 삶은 왜 시작되며, 죽음은 어디로 이어지는가?
+            신은 존재하는가, 아니면 인간이 만들어낸 개념인가? 이 질문은 단순한 호기심이 아니라, 설명되지 않는 것에 대한 근본적 의문이었다.
+            나는 “믿음”으로 답을 받기보다, 스스로 이해할 수 있는 설명을 원했다.
           </p>
-          <div class="btn-row">
-            <a class="btn primary"
-               href="https://bykim5710.github.io/NCG_Series_Guide/soul-and-zero-review_ko.pdf"
-               target="_blank" rel="noopener">
-              영과영 추천사 전문(PDF)
-            </a>
-            <a class="btn secondary"
-               href="https://bykim5710.github.io/NCG_Series_Guide/guide.html?v=3#recommendation"
-               target="_blank" rel="noopener">
-              안내 페이지에서 보기
-            </a>
+
+          <span class="h"><span class="num">2</span>확신이 아니라 질문의 심화</span>
+          <p>
+            1976년, 나는 내 삶의 흐름을 바꿔 놓은 하나의 사건을 겪었다. 많은 사람들은 종교적 체험을 통해 “확신”을 얻었다고 말하지만,
+            내게 그 사건은 오히려 질문을 더 깊게 만들었다. 나는 어떤 계시를 받았다고 선언하지 않았다.
+            대신, 기존 종교가 말하는 신과 인간, 사후세계의 구조를 처음부터 다시 검토해야 한다는 생각이 강해졌다.
+            그 사건은 믿음의 강화가 아니라, 검증의 시작이었다.
+          </p>
+
+          <span class="h"><span class="num">3</span>존재 구조에 대한 첫 정리 — 『영과 영』(2012)</span>
+          <p>
+            수십 년의 사유는 2012년 『영과 영(Soul &amp; Zero)』으로 처음 정리되었다. 이 책은 특정 종교를 옹호하기 위한 것이 아니라,
+            존재의 근원과 구조를 다시 묻기 위한 작업이었다. 나는 종교적 언어와 철학적 개념을 교차 검토하며,
+            신앙과 이성이 분리되어야 할 이유가 없다는 점을 강조했다. 종교가 진리라면, 논리적 검증을 견뎌야 한다는 것이 출발점이었다.
+          </p>
+
+          <span class="h"><span class="num">4</span>성서 검증으로의 확장 — 『하나님과의 대화』(2022)</span>
+          <p>
+            2022년 『하나님과의 대화』에서는 성서 텍스트 자체를 검토 대상으로 삼았다.
+            엘로힘과 여호와의 차이, 구약과 신약의 긴장, 교리 형성의 역사적 배경 등을 분석하며,
+            성서를 “권위의 문서”가 아니라 “검증의 대상”으로 다루었다.
+            성서를 읽지 않는 신앙은 신앙이 아니라 관습에 가깝다. 종교가 진리라면, 텍스트는 질문을 허용해야 한다.
+          </p>
+
+          <span class="h"><span class="num">5</span>사후세계 신화의 재구성 — 『무유(Nosome)』(2024)</span>
+          <p>
+            2024년 『무유(Nosome)』에서는 기존 종교가 말해 온 사후세계 개념을 근본적으로 재해석했다.
+            천국과 지옥이라는 이분법적 구조 대신, 존재의 전이 구조를 제시하며 “신화적 사후세계” 개념을 해체했다.
+            이것은 종교를 부정하기 위한 작업이 아니라, 오히려 성현들의 가르침이 왜곡 없이 이해되도록 되돌리기 위한 시도였다.
+          </p>
+
+          <span class="h"><span class="num">6</span>왜 지금 다시 묻는가</span>
+          <p>
+            오늘날 종교는 여전히 권위를 유지하고 있지만, 그 권위는 종종 검증을 회피하는 방식으로 작동한다.
+            모순은 신비로 덮이고, 질문은 불경으로 간주된다. 나는 이 시리즈를 통해 “믿으라”고 말하지 않는다.
+            읽고, 비교하고, 검증하라고 요청한다. 만약 종교가 진리라면 질문을 두려워할 이유가 없다.
+            그리고 바로 그 지점에서, 제1차 “종교혁명”은 시작된다.
+          </p>
+
+          <div class="callout">
+            다음 회차들에서는 위 문제의식을 바탕으로, “구약과 신약의 단절”, “교리 형성의 역사”, “사후세계 신화”,
+            그리고 “이승에서 가능한 천국(공동체적 영계)”이라는 방향으로 논의를 확장해 나갑니다.
+          </div>
+        </div>
+      </section>
+
+      <!-- 추천사 -->
+      <section id="recommendation" class="section">
+        <h2>추천사 (요약 + 전문 보기)</h2>
+        <p class="muted" style="margin-top:-6px">
+          요약은 여기에서만 보여주고, 전문(PDF)은 버튼 클릭으로 연결합니다. (서식은 연재물과 동일 톤)
+        </p>
+
+        <div class="rec">
+          <div class="recitem">
+            <div class="label">영과 영</div>
+            <p class="quote">“영과 영은 제목부터 심상치 않다. 방대한 종교 주제를 다루며 비판적 시각을 제시한다.”</p>
+
+            <!-- ✅ 아래 링크 파일명이 실제와 다르면 404가 뜹니다. (필수로 파일명 확인) -->
+            <div class="footer-nav">
+              <a class="btn primary" target="_blank" rel="noopener"
+                 href="https://bykim5710.github.io/NCG_Series_Guide/soul-and-zero-review_ko.pdf">
+                영과영 추천사 전문(PDF)
+              </a>
+            </div>
+            <div class="small" style="margin-top:10px">
+              ※ 위 PDF가 열리면 정상입니다. 404면 파일명이 다르거나 위치가 다릅니다.
+            </div>
           </div>
 
-          <div class="divider"></div>
+          <div class="recitem">
+            <div class="label">하나님과의 대화</div>
+            <p class="quote">“저자는 마르크스가 『자본론』을 쓴 노력을 능가할 열정으로 성서를 분석했다.”</p>
 
-          <h3 style="margin-bottom:8px;">하나님과의 대화</h3>
-          <p class="muted" style="margin:0 0 10px;">
-            “저자는 마르크스가 『자본론』을 쓴 노력을 능가할 열정으로 성서를 분석했다.”
-          </p>
-          <div class="btn-row">
-            <a class="btn primary"
-               href="https://bykim5710.github.io/NCG_Series_Guide/oneness-god-review_ko.pdf"
-               target="_blank" rel="noopener">
-              하나님과의 대화 추천사 전문(PDF)
-            </a>
-            <a class="btn secondary"
-               href="https://bykim5710.github.io/NCG_Series_Guide/guide.html?v=3#recommendation"
-               target="_blank" rel="noopener">
-              안내 페이지에서 보기
-            </a>
+            <!-- ✅ 사용자가 원하신 ‘세 번째 화면 주소’ 방식(절대주소) -->
+            <div class="footer-nav">
+              <a class="btn primary" target="_blank" rel="noopener"
+                 href="https://bykim5710.github.io/NCG_Series_Guide/oneness-god-review_ko.pdf">
+                하나님과의 대화 추천사 전문(PDF)
+              </a>
+            </div>
+            <div class="small" style="margin-top:10px">
+              파일명이 다르면 예: <b>oneness-god-review_ko.pdf</b> → 실제 파일명으로 수정하세요.
+            </div>
           </div>
         </div>
 
-      </div>
-    </section>
+        <div class="callout" style="margin-top:14px">
+          <b>중요:</b> GitHub Pages에서 PDF 링크가 “가이드 페이지 전체”로 열리는 문제는,
+          링크가 PDF 파일이 아니라 <b>guide.html(페이지)</b>로 연결되어 있을 때 생깁니다.
+          위처럼 <b>PDF 파일 자체(…/xxx.pdf)</b>로 링크하면 해결됩니다.
+        </div>
+      </section>
 
+      <!-- 보도자료(선택 확장: 원하신 ‘세 권 모두’ 연결) -->
+      <section class="section">
+        <h2>보도자료 (세 권 모두)</h2>
+        <p class="muted" style="margin-top:-6px">
+          원하신 대로, 저자 소개는 한 번만 두되 각 책의 보도자료(PDF)로 직접 연결할 수 있게 “확장 슬롯”을 마련했습니다.
+        </p>
+
+        <div class="footer-nav">
+          <!-- 아래 3개는 파일명을 모르면 404가 날 수 있으니, 실제 파일명에 맞춰 수정하세요 -->
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://bykim5710.github.io/NCG_Series_Guide/soul-and-zero_ko.pdf">
+            영과영 보도자료(PDF)
+          </a>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://bykim5710.github.io/NCG_Series_Guide/oneness-god_ko.pdf">
+            하나님과의 대화 보도자료(PDF)
+          </a>
+          <a class="btn" target="_blank" rel="noopener"
+             href="https://bykim5710.github.io/NCG_Series_Guide/nosome_ko.pdf">
+            무유 보도자료(PDF)
+          </a>
+        </div>
+
+        <div class="small" style="margin-top:10px">
+          ※ 위 3개 보도자료 파일명이 다르다면, 가이드 페이지에서 실제 파일명을 확인한 뒤 동일하게 맞추면 됩니다.
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <div class="footer-nav">
+        <a class="btn" href="../index.html">메인으로</a>
+        <a class="btn primary" href="#preface">서문 맨 위로</a>
+      </div>
+    </main>
   </div>
 </body>
 </html>
