@@ -1,444 +1,277 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>제01회 저자 소개 책 소개 (김병윤)</title>
-
-  <!-- SEO -->
-  <meta name="description" content="김병윤 저자 소개와 『하나님과의 대화(Conversation with Oneness God)』 책 소개를 모바일/웹 가독성에 최적화된 HTML 구조로 정리한 페이지입니다." />
-  <meta name="keywords" content="김병윤, 저자 소개, 하나님과의 대화, Conversation with Oneness God, 무유, Nosome, 신통신통회, 종교혁명" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="제01회 저자 소개 책 소개 (김병윤)" />
-  <meta property="og:description" content="김병윤 저자 소개 및 『하나님과의 대화』 책 소개를 읽기 좋은 웹페이지로 재구성했습니다." />
-  <!-- 필요 시 OG 이미지 지정 -->
-  <!-- <meta property="og:image" content="https://bykim5710.github.io/series-kr-web/og/ep01.png" /> -->
+  <title>제1차 서문 – 종교혁명 총서</title>
 
   <style>
     :root{
-      --bg:#0b0f14;
-      --card:#0f1620;
-      --text:#e8eef6;
-      --muted:#a9b6c6;
-      --line:rgba(255,255,255,.12);
-      --accent:#ffc000;
-      --accent2:#ffd966;
-      --max: 980px;
-      --radius: 18px;
+      --bg:#05070d;
+      --card:#0b1220;
+      --card2:#0e1a2e;
+      --text:#e9eefb;
+      --muted:#b9c4de;
+      --accent:#51d1ff;
+      --line:rgba(255,255,255,.08);
+      --shadow:0 16px 60px rgba(0,0,0,.55);
+      --radius:18px;
     }
-
-    html,body{height:100%}
+    html,body{height:100%;}
     body{
       margin:0;
-      background:linear-gradient(180deg, #070a0f, var(--bg));
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", Arial, sans-serif;
+      background: radial-gradient(1200px 800px at 10% 0%, #0a1530 0%, var(--bg) 55%);
       color:var(--text);
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
       line-height:1.75;
-      letter-spacing:-0.2px;
     }
+    a{color:var(--accent); text-decoration:none;}
+    a:hover{text-decoration:underline;}
 
-    a{color:var(--accent2); text-decoration:none}
-    a:hover{text-decoration:underline}
-
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
-
-    header{
-      padding:26px 20px;
-      background:rgba(255,255,255,.03);
+    .wrap{max-width:980px; margin:0 auto; padding:44px 18px 90px;}
+    .hero{
+      background: linear-gradient(180deg, rgba(81,209,255,.08), rgba(81,209,255,0));
       border:1px solid var(--line);
-      border-radius:var(--radius);
-      backdrop-filter: blur(8px);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
     }
-    header .kicker{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      color:var(--muted);
-      font-size:13px;
-      margin-bottom:8px;
+    .hero-inner{padding:34px 26px 22px;}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      font-weight:700; color:var(--muted); letter-spacing:.02em;
+      background: rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      padding:8px 12px; border-radius:999px;
     }
-    header h1{
-      margin:0 0 10px;
-      font-size: clamp(22px, 3.2vw, 34px);
-      line-height:1.2;
-      letter-spacing:-0.6px;
+    .title{
+      margin:18px 0 10px;
+      font-size:32px;
+      line-height:1.25;
+      letter-spacing:-.02em;
     }
-    header p{
+    .subtitle{
       margin:0;
       color:var(--muted);
-      font-size: 15px;
+      font-size:15.5px;
     }
-
-    .topbar{
-      display:flex; gap:10px; flex-wrap:wrap;
-      margin-top:16px;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 12px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      color:var(--text);
-      font-size:14px;
-      text-decoration:none;
-    }
-    .btn:hover{background:rgba(255,255,255,.07)}
-    .btn.primary{
-      border-color:rgba(255,192,0,.35);
-      background:rgba(255,192,0,.10);
-      color:var(--accent2);
-    }
-
-    .meta{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top:10px;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .pill{
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-    }
+    .divider{height:1px; background:var(--line); margin:22px 0;}
 
     .grid{
       display:grid;
-      grid-template-columns: 1fr;
-      gap:16px;
-      margin-top:18px;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      padding:0 26px 26px;
+    }
+    @media (max-width:860px){
+      .grid{grid-template-columns:1fr;}
     }
 
     .card{
-      background:rgba(255,255,255,.03);
+      background: rgba(255,255,255,.03);
       border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:20px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      overflow:hidden;
     }
+    .card .pad{padding:22px 20px;}
+    .card h3{margin:0 0 12px; font-size:18px;}
+    .muted{color:var(--muted);}
 
-    .toc h2, section h2{
-      margin:0 0 10px;
-      font-size:20px;
-      letter-spacing:-0.4px;
+    /* writer image */
+    .writer{
+      display:flex;
+      gap:16px;
+      align-items:center;
     }
-    .toc ol{
+    .writer img{
+      width:120px; height:auto;
+      border-radius:14px;
+      border:1px solid var(--line);
+      box-shadow: 0 12px 28px rgba(0,0,0,.5);
+      background:#000;
+    }
+    .writer .who{
+      font-weight:800;
+      margin:0 0 6px;
+      font-size:16px;
+    }
+    .writer .desc{
       margin:0;
-      padding-left:18px;
       color:var(--muted);
-    }
-    .toc li{margin:6px 0}
-    .toc a{color:var(--muted)}
-    .toc a:hover{color:var(--accent2)}
-
-    section h3{
-      margin:22px 0 10px;
-      font-size:16px;
-      color:var(--accent2);
-      letter-spacing:-0.2px;
+      font-size:14px;
     }
 
-    blockquote{
-      margin:14px 0;
-      padding:12px 14px;
-      border-left:3px solid rgba(255,192,0,.55);
-      background:rgba(255,255,255,.03);
-      border-radius:12px;
-      color:var(--text);
+    /* book covers */
+    .books{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:16px;
+    }
+    @media (max-width:760px){
+      .books{grid-template-columns:1fr;}
+    }
+    .book{
+      background: rgba(255,255,255,.02);
+      border:1px solid var(--line);
+      border-radius: 16px;
+      overflow:hidden;
+    }
+    .book img{
+      width:100%;
+      display:block;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      background:#000;
+    }
+    .book .cap{
+      padding:12px 12px 14px;
+      border-top:1px solid var(--line);
+    }
+    .book .cap b{display:block; font-size:14.5px; margin-bottom:2px;}
+    .book .cap span{color:var(--muted); font-size:13px;}
+
+    /* main text */
+    .main{
+      margin-top:18px;
+      padding:22px 22px 10px;
+    }
+    .main p{margin:0 0 14px;}
+    .quote{
+      margin:18px 0 8px;
+      padding:14px 16px;
+      background: rgba(81,209,255,.06);
+      border:1px solid rgba(81,209,255,.18);
+      border-radius: 14px;
+      color: #dff7ff;
     }
 
-    .hr{
-      height:1px; background:var(--line);
-      margin:18px 0 0;
+    .footer-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:14px;
+      padding:0 22px 22px;
     }
-
-    .lead{
-      font-size:16px;
-      color:var(--text);
-      margin:0 0 10px;
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius: 999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      font-weight:700;
+      font-size:14px;
     }
-
-    p{margin:10px 0}
-    .muted{color:var(--muted)}
-    .note{
-      color:var(--muted);
-      font-size:13px;
-      margin-top:12px;
-    }
-
-    footer{
-      margin-top:20px;
-      color:var(--muted);
-      font-size:13px;
-      text-align:center;
-    }
-
-    @media (min-width: 900px){
-      .grid{grid-template-columns: 360px 1fr}
-      .sticky{position:sticky; top:14px; align-self:start}
+    .btn.primary{
+      background: rgba(81,209,255,.16);
+      border-color: rgba(81,209,255,.28);
+      color:#e8fbff;
     }
   </style>
 </head>
 
 <body>
   <div class="wrap">
-    <header>
-      <div class="kicker">
-        <span>신통신통회 종교혁명 시리즈</span>
-        <span class="muted">/</span>
-        <a class="muted" href="../index.html">목록으로</a>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="kicker">🔷 제1차 (Cycle 1) · 종교혁명 총서 서문</div>
+        <h1 class="title">왜 지금, 종교를 다시 묻는가</h1>
+        <p class="subtitle">세 권의 저서와 영상에 흩어진 사유를 한 흐름으로 모아, 제1차의 문제의식과 출발점을 정리합니다.</p>
+        <div class="divider"></div>
       </div>
 
-      <h1>제01회 저자 소개 책 소개</h1>
-      <p>매일종교신문 연재용 한글 원고를 “읽기 좋은 웹페이지(HTML)” 형식으로 재구성한 버전입니다.</p>
+      <div class="grid">
+        <!-- LEFT: writer / identity -->
+        <div class="card">
+          <div class="pad">
+            <h3>저자</h3>
+            <div class="writer">
+              <img src="../images/ep.01-writer.png" alt="김병윤" />
+              <div>
+                <p class="who">신통신통회(新統神通會) 회장 김병윤</p>
+                <p class="desc">
+                  존재·죽음·신·사후세계에 대한 질문을 50여 년간 추적해 왔습니다.<br/>
+                  이 총서는 “믿으라”가 아니라 “읽고, 비교하고, 검증하라”는 요청입니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <div class="topbar">
-        <!-- 원고 PDF를 repo에 올린 뒤 링크를 걸어주세요 (예: ../pdf/01-book-author.pdf) -->
-        <a class="btn primary" href="../pdf/01-book-author.pdf" target="_blank" rel="noopener">원고 PDF 다운로드</a>
+        <!-- RIGHT: books -->
+        <div class="card">
+          <div class="pad">
+            <h3>사유의 전개</h3>
+            <p class="muted" style="margin-top:-6px; margin-bottom:14px;">
+              2012 → 2022 → 2024 : 사유의 축적이 ‘종교혁명’이라는 질문으로 수렴해 온 과정
+            </p>
 
-        <a class="btn" href="#author">저자 소개로 이동</a>
-        <a class="btn" href="#book">책 소개로 이동</a>
+            <div class="books">
+              <div class="book">
+                <img src="../images/ep.01-영과영.jpg" alt="영과 영 (Soul & Zero)" />
+                <div class="cap">
+                  <b>2012 · 『영과 영 (Soul & Zero)』</b>
+                  <span>존재의 근원과 구조를 다시 묻다</span>
+                </div>
+              </div>
 
-        <!-- 추천사는 별도 페이지(또는 guide)로 연결: 중복 방지 -->
-        <a class="btn" href="../guide.html" rel="noopener">시리즈 안내로</a>
-        <!-- 또는 추천사 전용 페이지로 만들 경우:
-        <a class="btn" href="endorsement-01.html">추천사 보기</a>
-        -->
+              <div class="book">
+                <img src="../images/ep.01-하나님과의대화.png" alt="하나님과의 대화" />
+                <div class="cap">
+                  <b>2022 · 『하나님과의 대화』</b>
+                  <span>본문을 읽고 비교하며 교리를 검증하다</span>
+                </div>
+              </div>
+
+              <div class="book">
+                <img src="../images/ep.01-무유.jpg" alt="무유 (Nosome)" />
+                <div class="cap">
+                  <b>2024 · 『무유 (Nosome)』</b>
+                  <span>무유와 전이 구조로 사후세계 신화를 해체하다</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
 
-      <div class="meta">
-        <span class="pill">작성: 김병윤</span>
-        <span class="pill">구성: 저자 소개 + 책 소개</span>
-        <span class="pill">형식: 모바일/웹 가독성 최적화</span>
+      <!-- MAIN TEXT -->
+      <div class="card" style="margin:0 26px 26px;">
+        <div class="main">
+          <h3 style="margin:0 0 12px;">서문</h3>
+
+          <p>나는 초등학교 5학년 때 처음으로 이런 질문을 던졌다. 우리는 어디에서 왔는가. 삶은 왜 시작되며, 죽음은 어디로 이어지는가. 신은 존재하는가, 아니면 인간이 만들어낸 개념인가.</p>
+
+          <p>그 질문은 신학적이거나 철학적이기 이전에, 어린 한 인간의 존재론적 불안에서 비롯된 것이었다. 나는 그 질문을 잊지 않았다. 그리고 세월이 흐를수록 그 질문은 더 또렷해졌다.</p>
+
+          <p>1976년, 내 삶에는 하나의 전환점이 있었다. 나는 그것을 ‘마른 벼락’ 같은 경험으로 표현해 왔다. 그것은 특정 종교의 체험이라기보다 존재 자체에 대한 근원적 충격에 가까웠다. 그 순간 이후 나는 종교를 믿는 사람으로 남을 수 없었다. 그러나 동시에 종교를 쉽게 부정하는 사람도 될 수 없었다.</p>
+
+          <p>왜냐하면 종교가 다루는 질문 자체는 인간 존재의 가장 깊은 문제와 연결되어 있기 때문이다. 그때부터 나는 신을 믿을 것인가의 문제가 아니라, 신이라는 개념이 어떻게 형성되었는가를 묻기 시작했다. 계시는 무엇이며 그것은 역사 속에서 어떻게 기록되고 편집되었는가. 교리는 어떻게 만들어졌으며 누구에 의해 제도화되었는가. 성현들의 가르침은 어떻게 권력 구조 속에서 변형되었는가.</p>
+
+          <p>2012년 『영과 영』은 존재의 근원을 전통적 종교 언어로 반복하지 않고, 구조로 다시 묻기 위한 시도였다. 2022년 『하나님과의 대화』는 성서 텍스트를 직접 읽고 비교하며, 교리와 본문 사이의 간극을 확인하는 작업이었다. 2024년 『무유(Nosome)』는 무유와 전이(transmigration)의 구조로, 사후세계가 두려움과 통제의 장치로 굳어버린 현실을 넘어 존재의 구조를 재정립하려는 시도였다.</p>
+
+          <div class="quote">
+            이 총서는 특정 종교를 공격하기 위한 책이 아니다. <br/>
+            그것은 신을 부정하기 위한 선언도 아니다. <br/>
+            이것은 왜곡된 구조를 해체하고, 성현들의 본래 가르침을 복원하며, 인간 내면의 신성을 다시 묻기 위한 시도이다.
+          </div>
+
+          <p>제1차는 결론이 아니다. 판결도 아니다. 이것은 하나의 초대이다. 읽고, 비교하고, 질문하라. 믿기 전에 검토하라. 권위가 아니라 진리를 기준으로 삼으라. 그리고 묻자. 성현들의 가르침은 과연 지금 우리가 알고 있는 모습 그대로인가. 아니면, 어디선가 길을 잃어버린 것은 아닌가.</p>
+
+        </div>
+
+        <div class="footer-actions">
+          <a class="btn" href="./archive.html">아카이브로</a>
+          <a class="btn primary" href="./episode.html?v=1">제1회 영상으로</a>
+          <a class="btn" href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">맨 위로</a>
+        </div>
       </div>
-    </header>
 
-    <div class="grid">
-      <!-- TOC -->
-      <aside class="card toc sticky" aria-label="목차">
-        <h2>목차</h2>
-        <ol>
-          <li><a href="#author">저자 소개</a></li>
-          <li><a href="#book">책 소개 『하나님과의 대화』</a></li>
-        </ol>
-        <div class="hr"></div>
-        <p class="note">※ 추천사는 “시리즈 안내(Guide)”에 포함되어 있으므로, 이 회차 페이지에서는 중복을 피했습니다.</p>
-      </aside>
+    </section>
 
-      <!-- MAIN -->
-      <main>
-        <!-- 1) AUTHOR -->
-        <section id="author" class="card">
-          <h2>저자 소개</h2>
-          <p class="lead"><strong>김병윤</strong></p>
-
-          <h3>학력 경력</h3>
-          <p>
-            1957년생으로 연세대학교 경영학과와 퍼듀대학교 MBA 과정을 졸업했다.
-            대우조선과 삼성전자에서 20년 이상 근무하며 마케팅업무를 담당했으며,
-            삼성인력개발원에서 국제화 및 외국어 교육팀장을 역임하였고 이후 가천대학교, 신구대학교,
-            연세대학교 원주분교 및 호원대학교에서 겸임교수와 시간강사로 활동했다.
-            현재는 ㈜두레스경영연구소를 설립하여 운영하고 있다.
-          </p>
-
-          <h3>저서</h3>
-          <p>
-            저서로 『삼성신화 아직 멀었다』, 『고르디우스의 매듭』, 『대한민국 판도라 상자를 열다』,
-            『정아에게 보내는 서른 장의 편지』, 『영(靈)과 영(零)』 등이 있다.
-          </p>
-
-          <h3>문제의 시작 죽음의 공포와 1977년의 경험</h3>
-          <p>
-            초등학교 5학년 때 증조부모께서 돌아가실 때 처음 경험한 죽음의 공포는 끊임없이 저를 괴롭혔습니다.
-            그러던 가운데 1977년 봄 대학교 정문을 넘어설 때 마른 하늘의 벼락을 맞는 경험을 하였습니다.
-            정신 없이 쿠사(KUSA, 유네스코학생회)라는 학회의 사무실로 뛰어들어가
-            무의식 상태에서 적은 내용의 해답을 찾고자 긴긴 세월을 달려왔습니다.
-          </p>
-
-          <blockquote>
-            당시 작성한 쪽지는 잊어버렸지만, 적힌 내용은
-            “모든 존재는 육체, 정신 그리고 영으로 구성되어 있다.
-            피로를 느끼는 육체와 정신은 사라진다.
-            하지만 태초부터 있었고 영원히 존재하는 영이 모든 존재의 본질이며,
-            이것은 결코 죽지 않고 존속하게 된다”라는 것이었습니다.
-          </blockquote>
-
-          <h3>더 깊어진 질문 정신이 없는 나(self)의 문제</h3>
-          <p>
-            이 내용은 저를 더욱 심연으로 밀어 넣었습니다.
-            육체가 사라지는 것은 보이는 현상이니 받아들일 수 있었지만,
-            정신이 없는—즉 사고할 수 없는—나(self)라는 존재를 받아들일 수 없었기 때문입니다.
-          </p>
-
-          <h3>탐구의 확장 경전과 철학</h3>
-          <p>
-            이후 이에 대한 답을 찾기 위해 종교 책들을 섭렵하기 시작했고,
-            다양한 종류의 경전들을 접하게 되었습니다.
-            또한, 철학자들은 이 문제를 어떤 식으로 다루었는지 궁금하여
-            이들이 쓴 책자를 탐구했습니다.
-          </p>
-
-          <h3>저술의 시작과 축적</h3>
-          <p>
-            2005년에 처음으로 『삼성신화 아직 멀었다』라는 책을 발간하였습니다.
-            이후 여섯 권의 책을 더 내게 되었는데,
-            이런 경험이 없었다면 이번 책을 낼 수 없었을 것입니다.
-          </p>
-
-          <h3>비교종교학의 정리 『영(靈)과 영(零)』(2010)</h3>
-          <p>
-            2010년 일곱 번째 책을 냈는데 비교종교학 책인 『영(靈)과 영(零)』입니다.
-            구할 수 있는 모든 경전들을 읽어보고 느꼈던 점을 정리하여 출간하였습니다.
-            모든 존재가 하나라는 개념을 정립할 수 있었고,
-            존재의 본질로서 정신이 배제된 영(靈)을 받아들일 수 있었습니다.
-            하지만 이때까지만 해도 영의 정의에 대해서는 막연한 상태였습니다.
-          </p>
-
-          <h3>자연법칙과의 접점 『위대한 설계』와 영(零, zero)</h3>
-          <p>
-            『영과 영』 출간 직후 저는 스티븐 호킹의 『위대한 설계』라는 책을 읽고,
-            자연법칙 속에 종교적 질문을 포함한 사회과학 분야의 담론에 대한 해답이 있을 것이라는 확신을 갖게 되었습니다.
-          </p>
-          <p>
-            저를 사로잡은 내용은 ‘모든 물질은 그에 대응하는 반물질을 갖고 있으며,
-            이들이 서로 교류하면 원래의 상태인 영(零, zero)으로 사라진다’라는 것이었습니다.
-            『영과 영』 제목 뒤의 영(零)이 바로 이 영을 의미하는 것이었기에
-            이 법칙의 매혹에 사로잡혔습니다.
-          </p>
-
-          <h3>통섭의 확신</h3>
-          <p>
-            스티븐 호킹을 접하고 난 후 자연과학과 관련한 수많은 책을 접하면서
-            제가 구하고자 했던 질문에 대한 해답은 자연법칙 속에 내재되어 있고,
-            우리는 단지 그것을 찾아내면 된다는 것을 깨달았습니다.
-          </p>
-          <p>
-            이런 연구 과정을 거치면서 저는 종교를 포함한 사회과학의 법칙과
-            자연과학의 법칙이 따로 존재하는 것이 아니라
-            서로 긴밀한 연관성을 갖고 있다는 확신을 갖게 되었습니다.
-          </p>
-
-          <h3>『무유(無有, Nosome)』 원고 준비 (2016)</h3>
-          <p>
-            자연법칙에서 도출해 낼 수 있는 존재의 본질, 참다운 삶, 그리고 신의 정의 등에 대한 개념을 정리하여
-            2016년 영어로 저술한 『무유(無有, Nosome)』라는 제목의 원고를 준비하였습니다.
-          </p>
-
-          <h3>『하나님과의 대화』 집필 결심과 출간 (2022)</h3>
-          <p>
-            2018년 그동안 꿈 꾸어오던 책을 내기로 작심하고,
-            제목을 ‘신과의 대화’로 정했습니다.
-            하지만 대화 형식으로 책을 써본 경험이 없고,
-            어떤 식으로 구성할지 구상이 떠오르지 않았습니다.
-            허송세월을 보냈지만 틈틈이 관련된 내용의 메모는 남겨두었습니다.
-          </p>
-          <p>
-            그러다가 2021년 1월 14일 아버님 1주기 기일에 납골당에 성묘를 가서
-            집필을 결심하고 글을 쓰기 시작했고
-            2022년 1월에 『하나님과의 대화(Conversation with Oneness God)』라는 책을 출간하게 되었습니다.
-          </p>
-        </section>
-
-        <!-- 2) BOOK -->
-        <section id="book" class="card">
-          <h2>책 소개</h2>
-          <p class="lead"><strong>『하나님과의 대화』</strong> <span class="muted">— Conversation with Oneness God</span></p>
-
-          <h3>제목을 선택한 이유</h3>
-          <p>
-            『하나님과의 대화』라는 제목을 선정한 이유는 부처님이나 예수님이 설파한 가르침의 핵심은
-            ‘모든 존재가 하나임’이라는 것이기 때문입니다.
-            이런 내용을 제대로 이해하게 된다면 신의 개념을 제대로 이해할 수 있을 것입니다.
-          </p>
-
-          <h3>부제 성령으로 들여다 본 신통섭의 솔루션</h3>
-          <p>
-            ‘성령으로 들여다 본 신통섭의 솔루션’이라는 부제를 달게 된 것은,
-            잠시 머리를 식히는 동안 지속적으로 단어나 짧은 문장이
-            발상(發想, 내부적)이나 착상(着想, 외부적)을 통해 뇌리에 전달되고,
-            이를 찾으면 문장이 완성되는 경험을 했기 때문입니다.
-            꿈을 통해서도 책의 내용과 구성에 대한 아이디어가 제시되기도 했습니다.
-            이런 신비한 경험은 이후에도 지속되고 있습니다.
-          </p>
-
-          <h3>신통섭의 의미</h3>
-          <p>
-            ‘신통섭의 솔루션’이라고 한 이유는 21세기 발전된 자연과학 시대에
-            해법을 찾으려고 한 것을 강조하기 위함입니다.
-            과거 그리스 철학자들이 사회과학과 자연과학의 통섭을 통해
-            종교적 문제의 해결을 시도하였지만 명쾌한 정확한 해답을 구하지 못한 현상을
-            구통섭으로 정의하였습니다.
-          </p>
-
-          <h3>독자에게 바라는 점</h3>
-          <p>
-            이 책을 접하는 독자께서 이 책을 통해 사후세계와 신의 의미를 정확히 파악하시고,
-            거기에 걸맞은 삶을 설계하고 살아나가시길 기원합니다.
-            여러분이 자신의 운명을 미지의 존재에 맡기지 않고 담대하게 받아들이고,
-            자력으로 정상적이고 긍정적인 삶을 살아갈 수 있도록 하는데
-            자그마한 보탬이라도 되면 좋겠다는 것이,
-            제가 이 책을 집필한 이유이기도 합니다.
-          </p>
-          <p>
-            그리고 성령은 종교인들의 전유물이 아니고 모든 존재에게 고루 들어 있습니다.
-            부처님과 예수님은 이를 파악하시고 신성을 찾아 해탈을 이루셨습니다.
-          </p>
-
-          <h3>종교의 방향에 대한 기대</h3>
-          <p>
-            그리고 이번에는 확실히 예수께서 설파하셨던 존재의 본질, 사후세계,
-            그리고 우리 모두 하나님이라는 진리를 깨우치고
-            사랑의 원심력을 키워나가는 방향으로 종교의 방향타를 잡고,
-            일반인들에게 진정한 믿음을 제공하는 제대로 된 종교의 기능이 발휘되기를 기대해 봅니다.
-          </p>
-
-          <h3>종교계에 대한 요청</h3>
-          <p>
-            진리를 감추고 왜곡시켜온 종교계는 이번 기회에 진심으로 참회하고
-            정리된 답을 내놓고 순기능을 수행하는 장소로 바뀌어야 할 것입니다.
-            그리고 이 책이 제가 쓰는 종교 관련 마지막 책이 되기를,
-            그리고 이 책이 진정한 종교혁명의 조그마한 밀알과 불씨가 되기를 기원합니다.
-          </p>
-
-          <h3>통섭의 제안</h3>
-          <p>
-            자연과학의 다른 영역이 서로 통합(統合, Convergence)하여 새로운 제품과 서비스를 창출해
-            우리의 삶을 풍요롭고 편리하게 만들고 있듯이,
-            이제 우리는 사회과학과 자연과학의 통섭(統攝 Consilience)을 통하여,
-            인류가 찾고자 노력하는 수많은 주제와 질문에 대한 해답을 찾아나가야 합니다.
-            그리고 이를 통해 파악된 진리와 사실에 입각한 이론과 지식을 구축하고
-            이를 서로 공유하며 그 완성도를 높여나가야 할 것입니다.
-          </p>
-
-          <h3>책의 구성 4장</h3>
-          <p>
-            이 책은 네 장으로 구성되어 있습니다.
-            첫 장은 구약성경이 일부 역사적 사실에 기반한 대부분의 신화라는 것과,
-            왜 예수님께서 구약성경과 다른 새로운 약속(신약)을 내세우시며
-            구약성경과 결별하려고 하셨는지를 이해할 수 있도록
-            구약성경의 모순점을 분석한 내용입니다.
-          </p>
-          <p>
-            둘째 장은 예수님의 혁신적인 사회 개혁의 의도가 어떻게 좌절되었는지,
-            그리고 바울의 사상이 현 기독교의 기본 교리로 자리 잡게 된 배경을 설명합니다.
-          </p>
-          <p>
-            셋째 장에서는 사후세계의 허구성을 지적하면서
-            예수께서 주장하셨던 ‘이승에서의 천국’의 의미를 검토하고,
-            마지막 넷째 장은 예수님이나 부처님과 같이 깨우치신 분들이
-            신이나 존재의 본질에 대해 주장하신 내용의 정당성을
-            자연법칙과 연계하여 정리하였습니다.
-          </p>
-        </section>
-
-        <footer>
-          <p>© 김병윤 · 웹 가독성 최적화 편집본</p>
-        </footer>
-      </main>
-    </div>
   </div>
 </body>
 </html>
