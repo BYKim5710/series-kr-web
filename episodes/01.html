@@ -1,186 +1,419 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>제1회 – 왜 지금, 종교를 다시 묻는가</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>제1차 서문 – 왜 지금, 종교를 다시 묻는가</title>
 
-<style>
-:root{
-  --bg:#050c18;
-  --card:#0b1628;
-  --line:#1f2d45;
-  --text:#e8f0ff;
-  --muted:#9fb3d9;
-  --accent:#4ea1ff;
-}
+  <style>
+    :root{
+      --bg:#050c18;
+      --card:#0b1628;
+      --line:#1f2d45;
+      --text:#e8f0ff;
+      --muted:#9fb3d9;
+      --accent:#4ea1ff;
+      --accent2:#2bd4ff;
+      --shadow: rgba(0,0,0,.45);
+    }
 
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
-  line-height:1.7;
-}
+    *{ box-sizing:border-box; }
 
-.wrapper{
-  max-width:1100px;
-  margin:0 auto;
-  padding:60px 20px;
-}
+    body{
+      margin:0;
+      background: radial-gradient(1200px 700px at 20% 10%, #0a1b35 0%, var(--bg) 55%, #020611 100%);
+      color:var(--text);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+      line-height:1.75;
+    }
 
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:18px;
-  margin-bottom:28px;
-  box-shadow:0 10px 30px rgba(0,0,0,.4);
-}
+    a{ color:inherit; }
 
-.pad{ padding:30px; }
+    .wrapper{
+      max-width:1100px;
+      margin:0 auto;
+      padding:56px 18px 90px;
+    }
 
-h1{ font-size:36px; margin-bottom:12px; }
-h2{ margin-top:0; }
-h3{ margin-bottom:10px; }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:22px;
+      box-shadow:0 14px 40px var(--shadow);
+      margin:0 0 28px 0;
+      overflow:hidden;
+    }
 
-.muted{ color:var(--muted); }
+    .pad{ padding:30px; }
+    .pad-lg{ padding:34px; }
 
-.btn{
-  display:inline-block;
-  padding:10px 18px;
-  border-radius:10px;
-  text-decoration:none;
-  font-size:14px;
-  margin-top:10px;
-}
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      color: var(--muted);
+      font-size:13px;
+    }
+    .pill b{ color:#cfe0ff; font-weight:700; }
 
-.primary{
-  background:var(--accent);
-  color:#fff;
-}
+    h1{
+      margin:14px 0 10px;
+      font-size:36px;
+      letter-spacing:-0.02em;
+    }
+    .lead{
+      margin:0;
+      color:var(--muted);
+      max-width:900px;
+    }
 
-img{
-  max-width:100%;
-  border-radius:12px;
-}
-.flex{
-  display:flex;
-  gap:30px;
-  flex-wrap:wrap;
-}
-.book{
-  width:180px;
-  text-align:center;
-}
-</style>
+    h2{
+      margin:0 0 12px;
+      font-size:22px;
+      letter-spacing:-0.01em;
+    }
+    h3{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:-0.01em;
+      color:#d9e7ff;
+    }
+
+    .muted{ color:var(--muted); }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr 1.8fr;
+      gap:18px;
+    }
+    @media (max-width: 980px){
+      .grid{ grid-template-columns:1fr; }
+    }
+
+    .subcard{
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.16);
+      border-radius:18px;
+      padding:22px;
+      min-height: 100%;
+    }
+
+    .author-row{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+    }
+    .author-img{
+      width:120px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.14);
+      background:#0a1222;
+      box-shadow:0 10px 25px rgba(0,0,0,.35);
+      flex:0 0 auto;
+    }
+
+    .books{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .book{
+      width: 190px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.16);
+      padding:14px;
+    }
+    .book img{
+      width:100%;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:#0a1222;
+      display:block;
+    }
+    .book .meta{
+      margin-top:12px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .book .title{
+      font-weight:800;
+      color:#eaf2ff;
+      margin-bottom:4px;
+      font-size:14px;
+    }
+
+    .divider{
+      height:1px;
+      background: rgba(255,255,255,.10);
+      margin:18px 0;
+    }
+
+    .preface p{
+      margin:0 0 14px 0;
+      color:#e9f1ff;
+    }
+    .preface p:last-child{ margin-bottom:0; }
+
+    .num{
+      display:inline-flex;
+      width:28px;
+      height:28px;
+      align-items:center;
+      justify-content:center;
+      border-radius:10px;
+      margin-right:10px;
+      background: rgba(78,161,255,.16);
+      border: 1px solid rgba(78,161,255,.35);
+      color:#cfe6ff;
+      font-weight:800;
+      font-size:13px;
+      vertical-align:middle;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:11px 16px;
+      border-radius:12px;
+      text-decoration:none;
+      font-size:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+    }
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(78,161,255,.95), rgba(78,161,255,.78));
+      border:1px solid rgba(78,161,255,.25);
+      color:#fff;
+      font-weight:800;
+    }
+    .btn.secondary{
+      background: rgba(43,212,255,.10);
+      border:1px solid rgba(43,212,255,.28);
+      color:#dffbff;
+      font-weight:700;
+    }
+    .btn:hover{ filter:brightness(1.05); }
+    .btn:active{ transform:translateY(1px); }
+
+    .btn-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .small{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    code.k{
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:12px;
+      color:#d7e6ff;
+      background: rgba(0,0,0,.25);
+      padding:2px 6px;
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:8px;
+    }
+  </style>
 </head>
 
 <body>
-<div class="wrapper">
+  <div class="wrapper">
 
-<!-- 상단 제목 -->
-<div class="card">
-  <div class="pad">
-    <div class="muted">◆ 제1차 (Cycle 1) – 종교혁명 총서 서문</div>
-    <h1>왜 지금, 종교를 다시 묻는가</h1>
-    <p class="muted">
-      세 권의 저서와 영상에 흩어진 사유를 한 흐름으로 모아,
-      제1차의 문제의식과 출발점을 정리합니다.
-    </p>
-  </div>
-</div>
-
-<!-- 저자 소개 -->
-<div class="card">
-  <div class="pad flex">
-    <div>
-      <img src="../images/ep.01-writer.png" width="180">
-    </div>
-    <div>
-      <h2>저자</h2>
-      <p><b>신통신통회(新統神通會) 회장 김병윤</b></p>
-      <p class="muted">
-        존재·죽음·신·사후세계에 대한 질문을 50여 년간 추적해 왔습니다.
-        이 총서는 “믿으라”가 아니라 “읽고, 비교하고, 검증하라”는 요청입니다.
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- 사유의 전개 -->
-<div class="card">
-  <div class="pad">
-    <h2>사유의 전개</h2>
-    <p class="muted">
-      2012 → 2022 → 2024 : 사유의 축적이 ‘종교혁명’이라는 질문으로 수렴해 온 과정
-    </p>
-
-    <div class="flex">
-
-      <div class="book">
-        <img src="../images/ep.01-영과영.jpg">
-        <p><b>2012 『영과 영』</b></p>
+    <!-- Header -->
+    <section class="card">
+      <div class="pad-lg">
+        <div class="pill">
+          <span>◆</span>
+          <b>제1차 (Cycle 1)</b>
+          <span class="muted">종교혁명 총서 서문</span>
+        </div>
+        <h1>왜 지금, 종교를 다시 묻는가</h1>
+        <p class="lead">
+          세 권의 저서와 영상에 흩어진 사유를 한 흐름으로 모아,
+          제1차의 문제의식과 출발점을 정리합니다.
+        </p>
       </div>
+    </section>
 
-      <div class="book">
-        <img src="../images/ep.01-하나님과의대화.png">
-        <p><b>2022 『하나님과의 대화』</b></p>
+    <!-- Author + Books -->
+    <section class="card">
+      <div class="pad">
+        <div class="grid">
+
+          <div class="subcard">
+            <h2>저자</h2>
+            <div class="author-row">
+              <img class="author-img" src="../images/ep.01-writer.png" alt="저자 사진" />
+              <div>
+                <div style="font-weight:900; margin-bottom:6px;">신통신통회(新統神通會) 회장 김병윤</div>
+                <div class="muted">
+                  존재·죽음·신·사후세계에 대한 질문을 50여 년간 추적해 왔습니다.<br />
+                  이 총서는 “믿으라”가 아니라 “읽고, 비교하고, 검증하라”는 요청입니다.
+                </div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="small">
+              이미지 폴더: <code class="k">/images</code><br/>
+              현재 페이지: <code class="k">/episodes/01.html</code>
+            </div>
+          </div>
+
+          <div class="subcard">
+            <h2>사유의 전개</h2>
+            <p class="muted" style="margin:0;">
+              2012 → 2022 → 2024 : 사유의 축적이 ‘종교혁명’이라는 질문으로 수렴해 온 과정
+            </p>
+
+            <div class="books">
+              <div class="book">
+                <img src="../images/ep.01-영과영.jpg" alt="영과 영 표지" />
+                <div class="meta">
+                  <div class="title">2012 『영과 영 (Soul &amp; Zero)』</div>
+                  <div>존재의 근원과 구조를 다시 묻다</div>
+                </div>
+              </div>
+
+              <div class="book">
+                <img src="../images/ep.01-하나님과의대화.png" alt="하나님과의 대화 표지" />
+                <div class="meta">
+                  <div class="title">2022 『하나님과의 대화』</div>
+                  <div>본문을 읽고 비교하며 교리를 검증하다</div>
+                </div>
+              </div>
+
+              <div class="book">
+                <img src="../images/ep.01-무유.jpg" alt="무유 표지" />
+                <div class="meta">
+                  <div class="title">2024 『무유 (Nosome)』</div>
+                  <div>무유와 전이 구조로 사후세계 신화를 해체하다</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
+    </section>
 
-      <div class="book">
-        <img src="../images/ep.01-무유.jpg">
-        <p><b>2024 『무유 (Nosome)』</b></p>
+    <!-- Preface (6 paragraphs) -->
+    <section class="card">
+      <div class="pad preface">
+        <h2>서문</h2>
+
+        <h3><span class="num">1</span>첫 질문</h3>
+        <p>
+          나는 초등학교 5학년 때 처음으로 이런 질문을 던졌다. 우리는 어디에서 왔는가? 삶은 왜 시작되며,
+          죽음은 어디로 이어지는가? 신은 존재하는가, 아니면 인간이 만들어낸 개념인가? 이 질문은 단순한 호기심이 아니라,
+          설명되지 않는 것에 대한 근본적인 의문이었다. 나는 ‘믿음’으로 답을 받기보다,
+          스스로 이해할 수 있는 설명을 원했다.
+        </p>
+
+        <h3><span class="num">2</span>확신이 아니라 질문의 심화</h3>
+        <p>
+          1976년, 인생의 한 전환점을 맞았다. 많은 사람들은 종교적 체험을 통해 확신을 얻었다고 말하지만,
+          나에게 그 사건은 오히려 질문을 더 깊게 만들었다. 나는 어떤 계시를 받았다고 선언하지 않았다.
+          대신, 기존 종교가 말하는 신과 인간, 사후세계의 구조를 처음부터 다시 검토해야 한다는 생각이 강해졌다.
+          그것은 믿음의 강화가 아니라, 검증의 시작이었다.
+        </p>
+
+        <h3><span class="num">3</span>존재 구조에 대한 첫 정리 – 『영과 영』(2012)</h3>
+        <p>
+          수십 년간의 사유는 2012년 『영과 영(Soul &amp; Zero)』으로 처음 정리되었다.
+          이 책은 특정 종교를 옹호하기 위한 것이 아니라, 존재의 근원과 구조를 다시 묻기 위한 작업이었다.
+          나는 종교적 언어와 철학적 개념을 교차 검토하며, 신앙과 이성이 분리되어야 할 이유가 없다는 점을 강조했다.
+          종교가 진리라면, 논리적 검증을 견뎌야 한다는 것이 출발점이었다.
+        </p>
+
+        <h3><span class="num">4</span>성서 검증으로의 확장 – 『하나님과의 대화』(2022)</h3>
+        <p>
+          2022년 『하나님과의 대화』에서는 성서 텍스트 자체를 검토 대상으로 삼았다.
+          엘로힘과 여호와의 차이, 구약과 신약의 긴장, 교리 형성의 역사적 배경 등을 분석하며,
+          성경을 ‘권위의 문서’가 아니라 ‘검증의 대상’으로 다루었다.
+          성서를 읽지 않는 신앙은 신앙이 아니라 관습에 가깝다.
+          종교가 진리라면, 텍스트는 질문을 허용해야 한다.
+        </p>
+
+        <h3><span class="num">5</span>사후세계 신화의 재구성 – 『무유(Nosome)』(2024)</h3>
+        <p>
+          2024년 『무유(Nosome)』에서는 기존 종교가 말해 온 사후세계 개념을 근본적으로 재해석했다.
+          천국과 지옥이라는 이분법적 구조 대신, 존재의 전이 구조를 제시하며 신화적 사후세계 개념을 해체했다.
+          이것은 종교를 부정하기 위한 작업이 아니라,
+          오히려 성현들의 가르침을 왜곡 없이 이해하기 위한 시도였다.
+        </p>
+
+        <h3><span class="num">6</span>왜 지금 다시 묻는가</h3>
+        <p>
+          오늘날 종교는 여전히 권위를 유지하고 있지만, 그 권위는 종종 검증을 회피하는 방식으로 작동한다.
+          모순은 신비로 덮이고, 질문은 불경으로 간주된다. 나는 이 시리즈를 통해 ‘믿으라’고 말하지 않는다.
+          읽고, 비교하고, 검증하라고 요청한다. 만약 종교가 진리라면, 질문을 두려워할 이유가 없다.
+          그리고 만약 질문을 견디지 못한다면, 그것은 다시 물어야 할 대상이다.
+        </p>
       </div>
+    </section>
 
-    </div>
+    <!-- Recommendations (summary + direct PDF links) -->
+    <section class="card" id="recommendation">
+      <div class="pad">
+        <h2>추천사</h2>
+        <p class="muted" style="margin:0 0 14px;">
+          추천사는 본문 중복을 피하기 위해 핵심 한 줄만 소개하고, 전문은 PDF로 직접 연결합니다.
+        </p>
+
+        <div class="subcard" style="margin-top:12px;">
+          <h3 style="margin-bottom:8px;">영과영</h3>
+          <p class="muted" style="margin:0 0 10px;">
+            “영과 영은 제목부터 심상치 않다. 방대한 종교 주제를 다루며 비판적 시각을 제시한다.”
+          </p>
+          <div class="btn-row">
+            <a class="btn primary"
+               href="https://bykim5710.github.io/NCG_Series_Guide/soul-and-zero-review_ko.pdf"
+               target="_blank" rel="noopener">
+              영과영 추천사 전문(PDF)
+            </a>
+            <a class="btn secondary"
+               href="https://bykim5710.github.io/NCG_Series_Guide/guide.html?v=3#recommendation"
+               target="_blank" rel="noopener">
+              안내 페이지에서 보기
+            </a>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3 style="margin-bottom:8px;">하나님과의 대화</h3>
+          <p class="muted" style="margin:0 0 10px;">
+            “저자는 마르크스가 『자본론』을 쓴 노력을 능가할 열정으로 성서를 분석했다.”
+          </p>
+          <div class="btn-row">
+            <a class="btn primary"
+               href="https://bykim5710.github.io/NCG_Series_Guide/oneness-god-review_ko.pdf"
+               target="_blank" rel="noopener">
+              하나님과의 대화 추천사 전문(PDF)
+            </a>
+            <a class="btn secondary"
+               href="https://bykim5710.github.io/NCG_Series_Guide/guide.html?v=3#recommendation"
+               target="_blank" rel="noopener">
+              안내 페이지에서 보기
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </div>
-</div>
-
-<!-- 서문 -->
-<div class="card">
-  <div class="pad">
-    <h2>서문</h2>
-    <p>
-      나는 초등학교 5학년 때 처음으로 이런 질문을 던졌다.
-      우리는 어디에서 왔는가? 삶은 왜 시작되며, 죽음은 어디로 이어지는가?
-      신은 존재하는가, 아니면 인간이 만들어낸 개념인가?
-    </p>
-    <p>
-      이 질문은 단순한 호기심이 아니었다.
-      수십 년간 이어진 탐구는 기존 종교의 교리·권위·제도에 대해
-      근본적으로 다시 묻는 작업으로 이어졌다.
-    </p>
-  </div>
-</div>
-
-<!-- 추천사 요약 -->
-<div class="card">
-  <div class="pad">
-    <h2>추천사 (요약)</h2>
-
-    <p><b>『영과 영』</b></p>
-    <p class="muted">
-      “방대한 종교 주제를 다루며 비판적 시각을 제시한다.”
-    </p>
-    <a class="btn primary"
-       href="https://bykim5710.github.io/NCG_Series_Guide/guide.html?v=3#recommendation">
-       추천사 전문 보기
-    </a>
-
-    <br><br>
-
-    <p><b>『하나님과의 대화』</b></p>
-    <p class="muted">
-      “성서를 집요한 열정으로 분석했다.”
-    </p>
-    <a class="btn primary"
-       href="https://bykim5710.github.io/NCG_Series_Guide/guide.html?v=3#recommendation">
-       추천사 전문 보기
-    </a>
-
-  </div>
-</div>
-
-</div>
 </body>
 </html>
