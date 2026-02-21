@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>제1차 종교혁명 — 책임선언 아카이브 (1976–2026)</title>
+
+  <!-- OG (선택) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="제1차 종교혁명 — 책임선언 아카이브 (1976–2026)" />
+  <meta property="og:description" content="1976의 질문에서 2026의 책임정리까지. 선언(전문은 제6회) 이후 정교화된 10가지 책임 정리와 판단 기준." />
+  <!-- 필요 시 대표 이미지로 교체 -->
+  <meta property="og:image" content="https://bykim5710.github.io/series.kr/ep.23-koor.png" />
+
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --card:#111;
+      --text:#eaeaea;
+      --muted:#b9b9b9;
+      --line:#242424;
+      --accent:#E6C15A;
+      --accent2:#FFD966;
+      --link:#9bd1ff;
+      --max:1100px;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,sans-serif;line-height:1.7}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 80px}
+    .topbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .crumb{font-size:14px;color:var(--muted)}
+    .crumb a{color:var(--muted)}
+    header.hero{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:26px 22px;
+    }
+    .kicker{font-size:14px;color:var(--muted);margin:0 0 6px}
+    h1{font-size:34px;line-height:1.2;margin:0 0 10px}
+    .subtitle{font-size:16px;color:var(--muted);margin:0 0 16px}
+    .note{
+      margin-top:14px;
+      padding:12px 14px;
+      border-left:4px solid var(--accent);
+      background:rgba(230,193,90,0.08);
+      border-radius:12px;
+      color:var(--text);
+      font-size:14px;
+    }
+    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .chip{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.02);
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .chip b{color:var(--accent2);font-weight:700}
+    nav.toc{
+      margin-top:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.02);
+      border-radius:var(--radius);
+      padding:14px 16px;
+    }
+    nav.toc .label{font-size:13px;color:var(--muted);margin:0 0 8px}
+    nav.toc ul{margin:0;padding-left:18px}
+    nav.toc li{margin:6px 0}
+    section{
+      margin-top:22px;
+      padding:20px 20px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.015);
+      border-radius:var(--radius);
+    }
+    section h2{margin:0 0 10px;font-size:22px;line-height:1.25}
+    .muted{color:var(--muted)}
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:14px;
+    }
+    @media (min-width: 900px){
+      .grid-2{grid-template-columns:1fr 1fr}
+    }
+    .card{
+      border:1px solid var(--line);
+      background:rgba(0,0,0,0.25);
+      border-radius:14px;
+      padding:14px 14px;
+    }
+    .card h3{margin:0 0 6px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .core-chart{
+      width:100%;
+      max-width:1100px;
+      display:block;
+      margin:14px auto 10px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:#000;
+    }
+    .caption{font-size:13px;color:var(--muted);margin:8px 0 0}
+    details{
+      border:1px solid var(--line);
+      background:rgba(0,0,0,0.25);
+      border-radius:14px;
+      padding:12px 12px;
+      margin:10px 0;
+    }
+    details summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:700;
+      color:var(--text);
+    }
+    details summary::-webkit-details-marker{display:none}
+    .summary-row{
+      display:flex;gap:10px;align-items:flex-start;justify-content:space-between;
+    }
+    .num{
+      min-width:28px;height:28px;border-radius:8px;
+      display:inline-flex;align-items:center;justify-content:center;
+      background:rgba(230,193,90,0.14);
+      border:1px solid rgba(230,193,90,0.35);
+      color:var(--accent2);font-weight:800;font-size:14px;
+    }
+    .sum-title{flex:1}
+    .sum-desc{margin:8px 0 0;color:var(--muted);font-size:14px}
+    .hr{height:1px;background:var(--line);margin:14px 0}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 12px;border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,0.02);
+      color:var(--text);
+      font-size:14px;
+      text-decoration:none;
+    }
+    .btn.primary{
+      border-color:rgba(230,193,90,0.45);
+      background:rgba(230,193,90,0.12);
+    }
+    footer{
+      margin-top:22px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+    .small{font-size:13px}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="crumb">
+        <a href="../index.html">Home</a> <span class="muted">/</span> <a href="./01.html">episodes</a> <span class="muted">/</span> 02
+      </div>
+      <div class="crumb small muted mono">series-kr-web · episodes/02.html</div>
+    </div>
+
+    <header class="hero" id="top">
+      <p class="kicker">제1차 종교혁명</p>
+      <h1>책임선언 아카이브</h1>
+      <p class="subtitle">1976의 질문에서 2026의 책임정리까지 — 선언 이후 정교화된 구조적 검토를 기록한다.</p>
+
+      <div class="note">
+        ※ <b>2024.05.05 종교혁명 선언서 전문</b>은 제6회 「무엇이 종교혁명인가」에서 제시한다.
+      </div>
+
+      <div class="chips" aria-label="핵심 흐름">
+        <div class="chip"><b>1976</b> 질문의 발화</div>
+        <div class="chip"><b>2024.05.05</b> 선언(전문: 제6회)</div>
+        <div class="chip"><b>2026.02</b> 10가지 책임 정리</div>
+      </div>
+
+      <nav class="toc" aria-label="페이지 목차">
+        <p class="label">목차</p>
+        <ul>
+          <li><a href="#sec1">1. 질문의 시작 (1976)</a></li>
+          <li><a href="#sec2">2. 선언의 형성 (2024.05.05)</a></li>
+          <li><a href="#sec3">3. 책임선언의 정교화 (2026.02)</a></li>
+          <li><a href="#sec4">4. 성현 가르침의 공통 구조 (도표)</a></li>
+          <li><a href="#sec5">5. 10가지 책임 정리 (요약)</a></li>
+          <li><a href="#sec6">6. 판단 기준</a></li>
+          <li><a href="#sec7">7. 기록의 성격 및 연결</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="sec1">
+      <h2>1. 질문의 시작 (1976)</h2>
+      <p class="muted">
+        1976년, 존재의 구조와 인간의 본질에 대한 질문이 제기되었다.
+        이는 어떤 교리의 확정이 아니라 장기간에 걸친 탐구의 출발점이었다.
+      </p>
+
+      <div class="grid-2" role="list">
+        <div class="card" role="listitem">
+          <h3>핵심 질문</h3>
+          <p>
+            우리는 어디로부터 왔는가? 삶과 죽음은 무엇인가? 신이나 사후세계는 존재하는가?
+            어떻게 사는 것이 올바른 삶인가? 모든 존재의 존재 가치는 무엇인가?
+          </p>
+        </div>
+        <div class="card" role="listitem">
+          <h3>탐구의 방향</h3>
+          <p>
+            자료 축적, 비교, 검증, 사유의 반복을 통해
+            주장과 근거의 연결을 점검하고 정리하는 방식으로 진행되었다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec2">
+      <h2>2. 선언의 형성 (2024.05.05)</h2>
+      <p class="muted">
+        2024년 5월 5일, 종교혁명 선언이 발표되었다.
+        이 선언은 종교를 파괴하기 위한 것이 아니라,
+        성현들의 가르침을 제도적 권력 구조로부터 회수하자는 제안으로 정리되었다.
+      </p>
+
+      <div class="note">
+        선언의 철학적 정의와 전문은 <b>제6회</b>에서 다룬다.
+        이 페이지(02)는 선언 이후 전개된 <b>책임 정리의 구조</b>를 기록한다.
+      </div>
+
+      <div class="btns" aria-label="연결 링크">
+        <a class="btn" href="./06.html">제6회: 무엇이 종교혁명인가 (선언서 전문)</a>
+        <a class="btn" href="#sec5">10가지 책임 정리로 이동</a>
+      </div>
+    </section>
+
+    <section id="sec3">
+      <h2>3. 책임선언의 정교화 (2026.02)</h2>
+      <p class="muted">
+        선언 이후, 기존 종교권력이 역사 속에서 형성한 구조적 문제를
+        10가지 항목으로 정리하였다.
+        이는 감정적 비판이 아니라, 철학적 정의와 역사적 검토를 거쳐 도출된 구조 분석으로 제시된다.
+      </p>
+
+      <div class="grid-2" role="list">
+        <div class="card" role="listitem">
+          <h3>정리의 목적</h3>
+          <p>논점의 분산을 줄이고, 주장·근거·검토 기준을 항목화하여 공개적으로 검토 가능한 형태로 제시한다.</p>
+        </div>
+        <div class="card" role="listitem">
+          <h3>정리의 성격</h3>
+          <p>개별 종파의 감정적 평가보다, 제도화 과정에서 나타난 공통 구조를 중심으로 기록한다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec4">
+      <h2>4. 성현 가르침의 공통 구조 (도표)</h2>
+
+      <!-- 이미지 경로: episodes/02.html 기준 -> ../images/... -->
+      <img
+        class="core-chart"
+        src="../images/ep.02-가르침.png"
+        alt="성현들의 핵심 가르침 구조 비교 도표"
+        loading="lazy"
+      />
+
+      <p class="caption">
+        위 도표는 세 성현의 핵심 가르침을 구조적으로 정리한 것이다.
+        표현과 상징은 달랐으나, 존재의 본질이 인간 내부에 내재한다는 점,
+        현세 구현을 지향한다는 점, 각성을 목표로 한다는 점에서 공통 구조가 확인된다.
+        책임 정리는 이 공통 구조가 제도화 과정에서 어떻게 변형되었는지를 검토한 결과로 제시된다.
+      </p>
+    </section>
+
+    <section id="sec5">
+      <h2>5. 10가지 책임 정리 (요약)</h2>
+      <p class="muted">
+        아래 항목은 책임 정리의 요약 기록이다.
+        각 항목은 핵심 논지를 2~3줄로 정리했으며,
+        상세 전개는 관련 회차(특히 제23회)에서 종합된다.
+      </p>
+
+      <details open>
+        <summary>
+          <span class="summary-row">
+            <span class="num">1</span>
+            <span class="sum-title">성현 가르침 변형의 문제</span>
+          </span>
+          <div class="sum-desc">
+            성현의 언어는 제도화 과정에서 축소·재해석되었으며,
+            본래의 의미와 다른 방향으로 고정되는 구조가 형성되었다.
+          </div>
+        </summary>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-row">
+            <span class="num">2</span>
+            <span class="sum-title">내재적 신성의 외주화</span>
+          </span>
+          <div class="sum-desc">
+            인간 내부의 신성은 초월적 권력으로 이전되었고,
+            중개 구조가 강화되며 인간의 각성 가능성이 약화되었다.
+          </div>
+        </summary>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-row">
+            <span class="num">3</span>
+            <span class="sum-title">사후 공포의 제도화</span>
+          </span>
+          <div class="sum-desc">
+            지옥과 심판 개념은 각성을 돕는 비유를 넘어
+            신앙을 유지·통제하는 장치로 작동하는 방향으로 사용되었다.
+          </div>
+        </summary>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-row">
+            <span class="num">4</span>
+            <span class="sum-title">현세 구현의 유예</span>
+          </span>
+          <div class="sum-desc">
+            현실에서 구현되어야 할 비전이
+            사후세계로 이연되면서 현세의 변형과 책임이 약화되는 구조가 나타났다.
+          </div>
+        </summary>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-row">
+            <span class="num">5</span>
+            <span class="sum-title">사랑의 구조 변화</span>
+          </span>
+          <div class="sum-desc">
+            사랑·자비·공경의 자발적 확장이
+            복종과 충성의 구조로 재구성되는 경향이 강화되었다.
+          </div>
+        </summary>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-row">
+            <span class="num">6</span>
+            <span class="sum-title">사유 이전의 믿음 형성</span>
+          </span>
+          <div class="sum-desc">
+            비판적 검토 이전에 교리가 주입되고,
+            신념의 세습 구조가 고착되는 방식이 반복되었다.
+          </div>
+        </summary>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-row">
+            <span class="num">7</span>
+            <span class="sum-title">교리 절대화</span>
+          </span>
+          <div class="sum-desc">
+            가르침이 ‘길’로 제안되기보다
+            법전처럼 봉인되며 인간의 고통과 현실이 부차화되는 구조가 나타났다.
+          </div>
+        </summary>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-row">
+            <span class="num">8</span>
+            <span class="sum-title">권력과의 결합</span>
+          </span>
+          <div class="sum-desc">
+            종교가 정치·경제 권력과 결합하여
+            상호 강화 구조를 형성하는 과정에서 진리 검증의 자리가 약화되었다.
+          </div>
+        </summary>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-row">
+            <span class="num">9</span>
+            <span class="sum-title">침묵의 구조</span>
+          </span>
+          <div class="sum-desc">
+            사회적 폭력과 차별 앞에서
+            종교가 비판적 역할을 수행하지 못하거나 침묵하는 사례가 누적되었다.
+          </div>
+        </summary>
+      </details>
+
+      <details>
+        <summary>
+          <span class="summary-row">
+            <span class="num">10</span>
+            <span class="sum-title">자기조정 실패</span>
+          </span>
+          <div class="sum-desc">
+            제도가 스스로를 조정하거나 내려놓는 방향으로
+            충분히 나아가지 못하면서 원래의 자리로의 복귀가 지연되는 구조가 반복되었다.
+          </div>
+        </summary>
+      </details>
+
+      <div class="btns" aria-label="관련 회차로 이동">
+        <a class="btn primary" href="./23.html">제23회: 책임선언 종합 및 최종 정리</a>
+        <a class="btn" href="./01.html">제1회: 질문의 시작(입구)</a>
+      </div>
+    </section>
+
+    <section id="sec6">
+      <h2>6. 판단 기준</h2>
+      <p class="muted">
+        이후 모든 종교 교리는 다음 질문을 통해 검토될 수 있다.
+        이 기준은 특정 종파를 위한 것이 아니라 보편적 검토 틀로 제시된다.
+      </p>
+
+      <div class="card">
+        <ul style="margin:0; padding-left:18px;">
+          <li><b>인간 안의 신성</b>은 억압의 대상인가, 각성의 대상인가?</li>
+          <li><b>사후세계</b>는 공포의 장치인가, 현재 삶의 변형인가?</li>
+          <li><b>신</b>은 외부 권위인가, 내면의 근원인가?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sec7">
+      <h2>7. 기록의 성격 및 연결</h2>
+      <p class="muted">
+        이 페이지는 종교혁명 선언이 어떻게 책임 정리 단계로 발전했는지를 정리한 기록이다.
+        최종 종합과 호소는 제23회에서 완결되며, 판단은 독자의 몫으로 남겨 둔다.
+      </p>
+
+      <div class="hr"></div>
+
+      <div class="btns" aria-label="하단 내비게이션">
+        <a class="btn" href="./01.html">제1회 — 질문의 시작</a>
+        <a class="btn" href="./06.html">제6회 — 선언서 전문</a>
+        <a class="btn primary" href="./23.html">제23회 — 종합 및 마감</a>
+        <a class="btn" href="#top">맨 위로</a>
+      </div>
+
+      <p class="caption">
+        ※ 링크 파일명(01/06/23.html)은 현재 저장소의 실제 파일명과 일치해야 합니다.
+        만약 개별 회차가 <span class="mono">episode.html?v=번호</span> 형태라면,
+        위 링크만 그 형식에 맞게 교체하면 됩니다.
+      </p>
+    </section>
+
+    <footer>
+      <div>© 新統神通會 (New Consilience Group) · Religious Revolution Archive</div>
+    </footer>
+  </div>
+</body>
+</html>
